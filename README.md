@@ -1,1 +1,1 @@
-# USC Team for the XPrize Covid Response Challenge
+# USC Team for the XPRIZE Covid Response Challenge
