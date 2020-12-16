@@ -1,1 +1,6 @@
-.DS_Store
+xprize
+.ipynb_checkpoints/
+__pycache__
+*.pyc
+.idea/
+**/.DS_Store

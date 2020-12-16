@@ -1,0 +1,28 @@
+# Copyright 2020 (c) Cognizant Digital Business, Evolutionary AI. All rights reserved. Issued under the Apache 2.0 License.
+
+venv/
+.ipynb_checkpoints/
+__pycache__
+*.pyc
+.idea/
+**/.DS_Store
+
+predictions/
+prescriptions/
+
+# Run the respective notebooks to download the data, train and persist the models and generate the predictions
+covid_xprize/examples/predictors/linear/data/
+covid_xprize/examples/predictors/linear/models/
+covid_xprize/examples/predictors/linear/predictions/
+
+covid_xprize/examples/predictors/lstm/data/OxCGRT_latest.csv
+covid_xprize/examples/predictors/lstm/models/
+covid_xprize/examples/predictors/lstm/predictions/
+covid_xprize/examples/predictors/lstm/tests/fixtures/OxCGRT_latest.csv
+
+covid_xprize/examples/prescriptors/neat/prescriptions/
+covid_xprize/examples/prescriptors/random/prescriptions/
+covid_xprize/examples/prescriptors/zero/prescriptions/
+
+covid_xprize/validation/tests/fixtures/OxCGRT_latest.csv
+
