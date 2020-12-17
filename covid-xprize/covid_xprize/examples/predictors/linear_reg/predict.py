@@ -16,7 +16,7 @@ ID_COLS = ['CountryName',
            'GeoID',
            'Date']
 CASES_COL = ['NewCases']
-NPI_COLS = ['C1_School closing',
+NPI_COLS_CATEGORICAL = ['C1_School closing',
             'C2_Workplace closing',
             'C3_Cancel public events',
             'C4_Restrictions on gatherings',
@@ -28,6 +28,52 @@ NPI_COLS = ['C1_School closing',
             'H2_Testing policy',
             'H3_Contact tracing',
             'H6_Facial Coverings']
+NPI_COLS = ['C1_School closing_0.0',
+            'C1_School closing_1.0',
+            'C1_School closing_2.0',
+            'C1_School closing_3.0',
+            'C2_Workplace closing_0.0',
+            'C2_Workplace closing_1.0',
+            'C2_Workplace closing_2.0',
+            'C2_Workplace closing_3.0',
+            'C3_Cancel public events_0.0',
+            'C3_Cancel public events_1.0',
+            'C3_Cancel public events_2.0',
+            'C4_Restrictions on gatherings_0.0',
+            'C4_Restrictions on gatherings_1.0',
+            'C4_Restrictions on gatherings_2.0',
+            'C4_Restrictions on gatherings_3.0',
+            'C4_Restrictions on gatherings_4.0',
+            'C5_Close public transport_0.0',
+            'C5_Close public transport_1.0',
+            'C5_Close public transport_2.0',
+            'C6_Stay at home requirements_0.0',
+            'C6_Stay at home requirements_1.0',
+            'C6_Stay at home requirements_2.0',
+            'C6_Stay at home requirements_3.0',
+            'C7_Restrictions on internal movement_0.0',
+            'C7_Restrictions on internal movement_1.0',
+            'C7_Restrictions on internal movement_2.0',
+            'C8_International travel controls_0.0',
+            'C8_International travel controls_1.0',
+            'C8_International travel controls_2.0',
+            'C8_International travel controls_3.0',
+            'C8_International travel controls_4.0',
+            'H1_Public information campaigns_0.0',
+            'H1_Public information campaigns_1.0',
+            'H1_Public information campaigns_2.0',
+            'H2_Testing policy_0.0',
+            'H2_Testing policy_1.0',
+            'H2_Testing policy_2.0',
+            'H2_Testing policy_3.0',
+            'H3_Contact tracing_0.0',
+            'H3_Contact tracing_1.0',
+            'H3_Contact tracing_2.0',
+            'H6_Facial Coverings_0.0',
+            'H6_Facial Coverings_1.0',
+            'H6_Facial Coverings_2.0',
+            'H6_Facial Coverings_3.0',
+            'H6_Facial Coverings_4.0']
 NB_LOOKBACK_DAYS = 30
 # For testing, restrict training data to that before a hypothetical predictor submission date
 HYPOTHETICAL_SUBMISSION_DATE = np.datetime64("2020-07-31")
@@ -80,8 +126,18 @@ def predict_df(start_date_str: str, end_date_str: str, path_to_ips_file: str, ve
     # Add GeoID column that combines CountryName and RegionName for easier manipulation of data",
     hist_ips_df['GeoID'] = hist_ips_df['CountryName'] + '__' + hist_ips_df['RegionName'].astype(str)
     # Fill any missing NPIs by assuming they are the same as previous day
-    for npi_col in NPI_COLS:
+    for npi_col in NPI_COLS_CATEGORICAL:
         hist_ips_df.update(hist_ips_df.groupby(['CountryName', 'RegionName'])[npi_col].ffill().fillna(0))
+    # One-hot encode NPI columns
+    for col in NPI_COLS_CATEGORICAL:
+      one_hot = pd.get_dummies(hist_ips_df[col],prefix=col)
+      hist_ips_df = hist_ips_df.drop(col, axis=1)
+      hist_ips_df = hist_ips_df.join(one_hot)
+    # Maintain same levels as trained on - a different ips set could cause issues otherwise
+    for col in NPI_COLS:
+        if col not in hist_ips_df:
+            hist_ips_df[col] = 0
+    hist_ips_df = hist_ips_df[ID_COLS + NPI_COLS]
 
     # Intervention plans to forecast for: those between start_date and end_date
     ips_df = hist_ips_df[(hist_ips_df.Date >= start_date) & (hist_ips_df.Date <= end_date)]
@@ -163,6 +219,9 @@ def predict_df(start_date_str: str, end_date_str: str, path_to_ips_file: str, ve
         geo_pred_df = ips_gdf[ID_COLS].copy()
         geo_pred_df['PredictedDailyNewCases'] = geo_preds
         geo_pred_dfs.append(geo_pred_df)
+        
+        if 'United States' in g:
+            print(geo_pred_df)
 
     # Combine all predictions into a single dataframe
     pred_df = pd.concat(geo_pred_dfs)
@@ -170,7 +229,6 @@ def predict_df(start_date_str: str, end_date_str: str, path_to_ips_file: str, ve
     # Drop GeoID column to match expected output format
     pred_df = pred_df.drop(columns=['GeoID'])
     return pred_df
-
 
 # !!! PLEASE DO NOT EDIT. THIS IS THE OFFICIAL COMPETITION API !!!
 if __name__ == '__main__':
