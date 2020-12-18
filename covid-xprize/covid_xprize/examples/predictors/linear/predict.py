@@ -30,7 +30,7 @@ NPI_COLS = ['C1_School closing',
             'H6_Facial Coverings']
 NB_LOOKBACK_DAYS = 30
 # For testing, restrict training data to that before a hypothetical predictor submission date
-HYPOTHETICAL_SUBMISSION_DATE = np.datetime64("2020-07-31")
+HYPOTHETICAL_SUBMISSION_DATE = np.datetime64("2020-11-30")
 
 
 def predict(start_date: str,
