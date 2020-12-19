@@ -6,11 +6,16 @@ import pickle
 
 import numpy as np
 import pandas as pd
+from sklearn.preprocessing import normalize, PowerTransformer, power_transform, scale, StandardScaler
+from sklearn.pipeline import make_pipeline
 
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_FILE = os.path.join(ROOT_DIR, "models", "model.pkl")
-DATA_FILE = os.path.join(ROOT_DIR, 'data', "OxCGRT_latest.csv")
+OXFORD_DATA_FILE = os.path.join(ROOT_DIR, 'data', "OxCGRT_latest.csv")
+SOCIAL_EXPLORER_DATA_FILE = os.path.join(ROOT_DIR, 'data', "social_explorer_data.csv")
+LODES_DATA_FILE = os.path.join(ROOT_DIR, 'data', "lodes_us_states_rac_S000_JT00_2018.csv")
+
 ID_COLS = ['CountryName',
            'RegionName',
            'GeoID',
@@ -74,10 +79,12 @@ NPI_COLS = ['C1_School closing_0.0',
             'H6_Facial Coverings_2.0',
             'H6_Facial Coverings_3.0',
             'H6_Facial Coverings_4.0']
-NB_LOOKBACK_DAYS = 30
 # For testing, restrict training data to that before a hypothetical predictor submission date
-HYPOTHETICAL_SUBMISSION_DATE = np.datetime64("2020-07-31")
-
+HYPOTHETICAL_SUBMISSION_DATE = np.datetime64("2020-11-30")
+# Set these parameters depending on model
+nb_lookback_days = 30
+rolling = False
+static = False
 
 def predict(start_date: str,
             end_date: str,
@@ -95,15 +102,50 @@ def predict(start_date: str,
     with columns "CountryName,RegionName,Date,PredictedDailyNewCases"
     """
     # !!! YOUR CODE HERE !!!
-    preds_df = predict_df(start_date, end_date, path_to_ips_file, verbose=False)
+    preds_df = predict_df(start_date, end_date, path_to_ips_file, verbose=False, NB_LOOKBACK_DAYS=nb_lookback_days, rolling=rolling, static=static)
     # Create the output path
     os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
     # Save to a csv file
     preds_df.to_csv(output_file_path, index=False)
     print(f"Saved predictions to {output_file_path}")
 
+def transform_data(data):
+    # pipe = make_pipeline(StandardScaler(with_std=False), PowerTransformer(standardize=True))
+    pipe = make_pipeline(StandardScaler(with_std=True))
+    if len(data.shape) == 1:
+        transformed_data = pipe.fit_transform(data.reshape(-1,1))
+        return (transformed_data, pipe)
+    transformed_data = pipe.fit_transform(data)
+    return (transformed_data, pipe)
+    
+def load_census_data():
+    census_data = pd.read_csv(SOCIAL_EXPLORER_DATA_FILE, skiprows=[1])
+    census_data.drop(columns=['FIPS'], inplace=True)
+    cols = census_data.columns.values
+    for feat in cols:
+        if 'Employed' in feat or 'Unemployed' in feat:
+            census_data.drop(columns=[feat], inplace=True)
+    # Standardize Census data
+    census_columns = census_data.columns[1:]
+    census_regions = census_data['Qualifying Name']
+    census_data, census_pipe = transform_data(census_data.iloc[:, 1:].values)
+    census_data = pd.DataFrame(data=census_data,columns=census_columns)
+    census_data.insert(0, 'Qualifying Name', census_regions)
+    census_cols = list(census_data.columns[1:].values)
+    return census_data, census_cols
 
-def predict_df(start_date_str: str, end_date_str: str, path_to_ips_file: str, verbose=False):
+def load_lodes_data():
+    lodes_data = pd.read_csv(LODES_DATA_FILE, skiprows=[1])
+    # Standardize lodes data
+    lodes_columns = lodes_data.columns[1:]
+    lodes_regions = lodes_data['Qualifying Name']
+    lodes_data, lodes_pipe = transform_data(lodes_data.iloc[:, 1:].values)
+    lodes_data = pd.DataFrame(data=lodes_data,columns=lodes_columns)
+    lodes_data.insert(0, 'Qualifying Name', lodes_regions)
+    lodes_cols = list(lodes_data.columns[1:].values)
+    return lodes_data, lodes_cols
+
+def predict_df(start_date_str: str, end_date_str: str, path_to_ips_file: str, verbose=False, NB_LOOKBACK_DAYS = 30, rolling=False, static=False):
     """
     Generates a file with daily new cases predictions for the given countries, regions and npis, between
     start_date and end_date, included.
@@ -116,6 +158,11 @@ def predict_df(start_date_str: str, end_date_str: str, path_to_ips_file: str, ve
     start_date = pd.to_datetime(start_date_str, format='%Y-%m-%d')
     end_date = pd.to_datetime(end_date_str, format='%Y-%m-%d')
 
+    if static:
+        # Load static data
+        census_data, census_cols = load_census_data()
+        lodes_data, lodes_cols = load_lodes_data()
+    
     # Load historical intervention plans, since inception
     hist_ips_df = pd.read_csv(path_to_ips_file,
                               parse_dates=['Date'],
@@ -145,7 +192,7 @@ def predict_df(start_date_str: str, end_date_str: str, path_to_ips_file: str, ve
     # Load historical data to use in making predictions in the same way
     # This is the data we trained on
     # We stored it locally as for predictions there will be no access to the internet
-    hist_cases_df = pd.read_csv(DATA_FILE,
+    hist_cases_df = pd.read_csv(OXFORD_DATA_FILE,
                                 parse_dates=['Date'],
                                 encoding="ISO-8859-1",
                                 dtype={"RegionName": str,
@@ -158,6 +205,10 @@ def predict_df(start_date_str: str, end_date_str: str, path_to_ips_file: str, ve
     # Fill any missing case values by interpolation and setting NaNs to 0
     hist_cases_df.update(hist_cases_df.groupby('GeoID').NewCases.apply(
         lambda group: group.interpolate()).fillna(0))
+    
+    if rolling:
+        hist_cases_df['NewCases'] = hist_cases_df.groupby("GeoID")['NewCases'].rolling(7, center=False).mean().reset_index(0, drop=True)
+        hist_cases_df["NewCases"]= hist_cases_df["NewCases"].fillna(0)
     # Keep only the id and cases columns
     hist_cases_df = hist_cases_df[ID_COLS + CASES_COL]
 
@@ -183,6 +234,24 @@ def predict_df(start_date_str: str, end_date_str: str, path_to_ips_file: str, ve
         past_cases = np.array(hist_cases_gdf[CASES_COL])
         past_npis = np.array(hist_ips_gdf[NPI_COLS])
         future_npis = np.array(ips_gdf[NPI_COLS])
+
+        countryName = ips_gdf['CountryName'].iloc[0]
+        regionName = ips_gdf['RegionName'].iloc[0]
+        if static:
+            # We are not predicting regions not in USA if we want to use static data
+            if countryName != 'United States':
+                # print("no static data for: ", g)
+                continue
+            # elif '_NaN' in g or '_nan' in g or regionName == 'Virgin Islands':
+                # print("no static data for: ", g)
+            #    continue
+            # Complete US row is a little annoying
+            if '_NaN' in g or '_nan' in g:
+                regionName = '(blank)'
+            census_gdf = census_data[census_data['Qualifying Name'] == regionName]
+            lodes_gdf = lodes_data[lodes_data['Qualifying Name'] == regionName]
+            all_census_data = np.array(census_gdf[census_cols].iloc[0])
+            all_lodes_data = np.array(lodes_gdf[lodes_cols].iloc[0])
         
         # Make prediction for each day
         geo_preds = []
@@ -191,8 +260,14 @@ def predict_df(start_date_str: str, end_date_str: str, path_to_ips_file: str, ve
             # Prepare data
             X_cases = past_cases[-NB_LOOKBACK_DAYS:]
             X_npis = past_npis[-NB_LOOKBACK_DAYS:]
-            X = np.concatenate([X_cases.flatten(),
-                                X_npis.flatten()])
+            X_npis_or = np.bitwise_or.reduce(X_npis, axis=0)
+            if static:
+                X_census = all_census_data
+                X_lodes = all_lodes_data
+                X = np.concatenate([X_cases.flatten(), X_npis_or.flatten(), X_census.flatten(), X_lodes.flatten()])
+            else:
+                X = np.concatenate([X_cases.flatten(),
+                                    X_npis_or.flatten()])
 
             # Make the prediction (reshape so that sklearn is happy)
             pred = model.predict(X.reshape(1, -1))[0]
@@ -219,9 +294,6 @@ def predict_df(start_date_str: str, end_date_str: str, path_to_ips_file: str, ve
         geo_pred_df = ips_gdf[ID_COLS].copy()
         geo_pred_df['PredictedDailyNewCases'] = geo_preds
         geo_pred_dfs.append(geo_pred_df)
-        
-        if 'United States' in g:
-            print(geo_pred_df)
 
     # Combine all predictions into a single dataframe
     pred_df = pd.concat(geo_pred_dfs)
