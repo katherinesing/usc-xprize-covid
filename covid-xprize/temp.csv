@@ -1,0 +1,160 @@
+,CountryName,RegionName,PredictorName,Cumul-7DMA-MAE-per-100K,PredictorRank
+4817,United States,,LSTM,113.55644622221581,1.0
+4817,United States,,Linear,163.44348087318102,2.0
+4817,United States,,GBR,294.8536474065263,3.0
+4839,United States,Alabama,LSTM,108.40257984619707,1.0
+4839,United States,Alabama,Linear,141.93962825519557,2.0
+4839,United States,Alabama,GBR,313.57436158369285,3.0
+4861,United States,Alaska,GBR,110.83057805494153,1.0
+4861,United States,Alaska,Linear,206.66433744462927,2.0
+4861,United States,Alaska,LSTM,419.0932549639996,3.0
+4883,United States,Arizona,Linear,102.52635526036774,1.0
+4883,United States,Arizona,LSTM,237.2097071129101,2.0
+4883,United States,Arizona,GBR,441.1297836652096,3.0
+4905,United States,Arkansas,Linear,122.00705181425394,1.0
+4905,United States,Arkansas,LSTM,144.25744085648148,2.0
+4905,United States,Arkansas,GBR,216.49825596625354,3.0
+4927,United States,California,Linear,117.1791823527271,1.0
+4927,United States,California,LSTM,225.2430035099467,2.0
+4927,United States,California,GBR,525.3227975731027,3.0
+4949,United States,Colorado,GBR,57.98644494147326,1.0
+4949,United States,Colorado,Linear,294.7930051197033,2.0
+4949,United States,Colorado,LSTM,334.8760155029757,3.0
+4971,United States,Connecticut,LSTM,142.50933615544608,1.0
+4971,United States,Connecticut,Linear,164.9535618350983,2.0
+4971,United States,Connecticut,GBR,352.58984588190634,3.0
+4993,United States,Delaware,Linear,104.05203521058755,1.0
+4993,United States,Delaware,LSTM,115.02345466412328,2.0
+4993,United States,Delaware,GBR,322.57207135275456,3.0
+5015,United States,Florida,LSTM,56.63456883103559,1.0
+5015,United States,Florida,GBR,78.82638265630759,2.0
+5015,United States,Florida,Linear,90.14738539125838,3.0
+5037,United States,Georgia,Linear,58.52448060535998,1.0
+5037,United States,Georgia,LSTM,67.81562750440058,2.0
+5037,United States,Georgia,GBR,241.7641009206107,3.0
+5059,United States,Hawaii,GBR,10.511746673133036,1.0
+5059,United States,Hawaii,LSTM,36.62844810717648,2.0
+5059,United States,Hawaii,Linear,171.9422052900106,3.0
+5081,United States,Idaho,GBR,180.2634609700101,1.0
+5081,United States,Idaho,Linear,231.29945646922724,2.0
+5081,United States,Idaho,LSTM,330.68981589816434,3.0
+5103,United States,Illinois,GBR,216.39786663752383,1.0
+5103,United States,Illinois,Linear,262.6890048260306,2.0
+5103,United States,Illinois,LSTM,325.4044527285204,3.0
+5125,United States,Indiana,GBR,243.06233290745487,1.0
+5125,United States,Indiana,Linear,301.24361328481075,2.0
+5125,United States,Indiana,LSTM,365.17339187974505,3.0
+5147,United States,Iowa,GBR,114.65874486864827,1.0
+5147,United States,Iowa,Linear,320.0663542503047,2.0
+5147,United States,Iowa,LSTM,392.1498791641566,3.0
+5169,United States,Kansas,GBR,91.5116478463415,1.0
+5169,United States,Kansas,LSTM,258.92312313298123,2.0
+5169,United States,Kansas,Linear,306.9209546676399,3.0
+5191,United States,Kentucky,LSTM,195.98176574620982,1.0
+5191,United States,Kentucky,Linear,211.03704107052025,2.0
+5191,United States,Kentucky,GBR,269.6544612603679,3.0
+5213,United States,Louisiana,LSTM,121.83471090450885,1.0
+5213,United States,Louisiana,Linear,213.30705017607585,2.0
+5213,United States,Louisiana,GBR,263.99399585480967,3.0
+5235,United States,Maine,GBR,127.3846563916621,1.0
+5235,United States,Maine,LSTM,136.65694953133115,2.0
+5235,United States,Maine,Linear,168.41431594343575,3.0
+5257,United States,Maryland,LSTM,51.268356782478826,1.0
+5257,United States,Maryland,Linear,76.7765153758381,2.0
+5257,United States,Maryland,GBR,104.50205139138207,3.0
+5279,United States,Massachusetts,LSTM,61.5853780885495,1.0
+5279,United States,Massachusetts,Linear,168.5660432566439,2.0
+5279,United States,Massachusetts,GBR,438.73401048056496,3.0
+5301,United States,Michigan,GBR,123.86783039342886,1.0
+5301,United States,Michigan,Linear,263.70465835101834,2.0
+5301,United States,Michigan,LSTM,295.3173512160396,3.0
+5323,United States,Minnesota,GBR,257.92723760516185,1.0
+5323,United States,Minnesota,Linear,383.0297885055906,2.0
+5323,United States,Minnesota,LSTM,542.9535802660137,3.0
+5345,United States,Mississippi,Linear,61.16515194037138,1.0
+5345,United States,Mississippi,LSTM,106.50218275528232,2.0
+5345,United States,Mississippi,GBR,265.6912238455164,3.0
+5367,United States,Missouri,GBR,48.53872997351878,1.0
+5367,United States,Missouri,Linear,130.46461471298247,2.0
+5367,United States,Missouri,LSTM,192.94455626196336,3.0
+5389,United States,Montana,GBR,104.84041213480815,1.0
+5389,United States,Montana,Linear,203.96222240532296,2.0
+5389,United States,Montana,LSTM,442.76986986371276,3.0
+5411,United States,Nebraska,GBR,204.94758026787335,1.0
+5411,United States,Nebraska,Linear,331.63043507226104,2.0
+5411,United States,Nebraska,LSTM,559.6261770324606,3.0
+5433,United States,Nevada,GBR,120.3042956073082,1.0
+5433,United States,Nevada,Linear,159.5663056546933,2.0
+5433,United States,Nevada,LSTM,195.25308090989017,3.0
+5455,United States,New Hampshire,Linear,83.2067488499155,1.0
+5455,United States,New Hampshire,LSTM,139.48754815667579,2.0
+5455,United States,New Hampshire,GBR,307.2861088866758,3.0
+5477,United States,New Jersey,GBR,26.944546464875277,1.0
+5477,United States,New Jersey,LSTM,115.70391330487107,2.0
+5477,United States,New Jersey,Linear,140.68277673121946,3.0
+5499,United States,New Mexico,GBR,95.83482320327612,1.0
+5499,United States,New Mexico,Linear,175.78486282561417,2.0
+5499,United States,New Mexico,LSTM,238.81020353657215,3.0
+5521,United States,New York,LSTM,46.121223776748636,1.0
+5521,United States,New York,Linear,85.13591725550606,2.0
+5521,United States,New York,GBR,146.6097858917686,3.0
+5543,United States,North Carolina,Linear,74.03394404413201,1.0
+5543,United States,North Carolina,LSTM,94.99107093346115,2.0
+5543,United States,North Carolina,GBR,205.7275577612439,3.0
+5565,United States,North Dakota,Linear,303.9950516105458,1.0
+5565,United States,North Dakota,GBR,361.5897995449052,2.0
+5565,United States,North Dakota,LSTM,501.1935851851319,3.0
+5587,United States,Ohio,LSTM,252.74215703134206,1.0
+5587,United States,Ohio,GBR,280.60008440889044,2.0
+5587,United States,Ohio,Linear,310.9055524798632,3.0
+5609,United States,Oklahoma,GBR,63.94387006862098,1.0
+5609,United States,Oklahoma,Linear,80.56031162354085,2.0
+5609,United States,Oklahoma,LSTM,155.6546853416434,3.0
+5631,United States,Oregon,GBR,54.42619070038216,1.0
+5631,United States,Oregon,Linear,65.37073254276694,2.0
+5631,United States,Oregon,LSTM,73.7326092381839,3.0
+5653,United States,Pennsylvania,LSTM,86.09728534509432,1.0
+5653,United States,Pennsylvania,Linear,134.23650746882268,2.0
+5653,United States,Pennsylvania,GBR,232.47280356029722,3.0
+5675,United States,Rhode Island,Linear,182.11187110997065,1.0
+5675,United States,Rhode Island,LSTM,390.2172309167137,2.0
+5675,United States,Rhode Island,GBR,443.1706596477092,3.0
+5697,United States,South Carolina,Linear,40.61659191119688,1.0
+5697,United States,South Carolina,LSTM,91.7663240719264,2.0
+5697,United States,South Carolina,GBR,267.26741521652207,3.0
+5719,United States,South Dakota,GBR,205.8377436526812,1.0
+5719,United States,South Dakota,Linear,233.34842313750664,2.0
+5719,United States,South Dakota,LSTM,544.6658240103087,3.0
+5741,United States,Tennessee,Linear,233.51724653238935,1.0
+5741,United States,Tennessee,GBR,328.983725290771,2.0
+5741,United States,Tennessee,LSTM,440.3544206253321,3.0
+5763,United States,Texas,LSTM,121.23366100878856,1.0
+5763,United States,Texas,Linear,145.79712051425145,2.0
+5763,United States,Texas,GBR,299.0791725376,3.0
+5785,United States,Utah,GBR,211.78512038964914,1.0
+5785,United States,Utah,Linear,297.7537552187123,2.0
+5785,United States,Utah,LSTM,402.3557238333534,3.0
+5807,United States,Vermont,LSTM,27.353533832627182,1.0
+5807,United States,Vermont,GBR,88.99570513143598,2.0
+5807,United States,Vermont,Linear,319.41616423304475,3.0
+5829,United States,Virgin Islands,Linear,,3.0
+5829,United States,Virgin Islands,GBR,,2.0
+5829,United States,Virgin Islands,LSTM,,1.0
+5851,United States,Virginia,Linear,78.05415224766506,1.0
+5851,United States,Virginia,LSTM,78.38572999105253,2.0
+5851,United States,Virginia,GBR,136.93153518349365,3.0
+5873,United States,Washington,GBR,97.13287095976146,1.0
+5873,United States,Washington,Linear,127.4951811246084,2.0
+5873,United States,Washington,LSTM,132.31829110364544,3.0
+5895,United States,Washington DC,Linear,,2.0
+5895,United States,Washington DC,GBR,,1.0
+5895,United States,Washington DC,LSTM,,3.0
+5917,United States,West Virginia,Linear,44.32492570610048,1.0
+5917,United States,West Virginia,LSTM,80.19140626011702,2.0
+5917,United States,West Virginia,GBR,109.55195538108386,3.0
+5939,United States,Wisconsin,GBR,106.75337493984252,1.0
+5939,United States,Wisconsin,Linear,247.6013221409987,2.0
+5939,United States,Wisconsin,LSTM,354.7590080183421,3.0
+5961,United States,Wyoming,GBR,186.76825846558054,1.0
+5961,United States,Wyoming,Linear,252.26536453553624,2.0
+5961,United States,Wyoming,LSTM,492.5865219829677,3.0
