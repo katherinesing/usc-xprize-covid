@@ -1,160 +1,425 @@
 ,CountryName,RegionName,PredictorName,Cumul-7DMA-MAE-per-100K,PredictorRank
 4817,United States,,LSTM,113.55644622221581,1.0
 4817,United States,,Linear,163.44348087318102,2.0
-4817,United States,,GBR,294.8536474065263,3.0
-4839,United States,Alabama,LSTM,108.40257984619707,1.0
-4839,United States,Alabama,Linear,141.93962825519557,2.0
-4839,United States,Alabama,GBR,313.57436158369285,3.0
-4861,United States,Alaska,GBR,110.83057805494153,1.0
+4817,United States,,mlp_model_1110_2,295.15804242388214,3.0
+4817,United States,,mlp_model_0110,343.25345706664024,4.0
+4817,United States,,mlp_model_1110_6,384.17006453552256,5.0
+4817,United States,,mlp_model_1110,419.1648674661566,6.0
+4817,United States,,mlp_model_0110_6,443.41271991493295,7.0
+4817,United States,,mlp_model_0110_2,449.76477562642816,8.0
+4839,United States,Alabama,mlp_model_1110,91.6358265338825,1.0
+4839,United States,Alabama,LSTM,108.40257984619707,2.0
+4839,United States,Alabama,mlp_model_0110_2,114.48488509792368,3.0
+4839,United States,Alabama,Linear,141.93962825519557,4.0
+4839,United States,Alabama,mlp_model_1110_6,242.11364358972304,5.0
+4839,United States,Alabama,mlp_model_0110_6,279.6544492288349,6.0
+4839,United States,Alabama,mlp_model_1110_2,510.98718318623486,7.0
+4839,United States,Alabama,mlp_model_0110,29302.377038186296,8.0
+4861,United States,Alaska,mlp_model_0110_6,199.99102480889053,1.0
 4861,United States,Alaska,Linear,206.66433744462927,2.0
-4861,United States,Alaska,LSTM,419.0932549639996,3.0
+4861,United States,Alaska,mlp_model_1110_6,208.09935029745603,3.0
+4861,United States,Alaska,mlp_model_1110_2,243.75192619454398,4.0
+4861,United States,Alaska,mlp_model_1110,280.35831007200676,5.0
+4861,United States,Alaska,LSTM,419.0932549639996,6.0
+4861,United States,Alaska,mlp_model_0110_2,539.412301663973,7.0
+4861,United States,Alaska,mlp_model_0110,181462.34226050787,8.0
 4883,United States,Arizona,Linear,102.52635526036774,1.0
-4883,United States,Arizona,LSTM,237.2097071129101,2.0
-4883,United States,Arizona,GBR,441.1297836652096,3.0
+4883,United States,Arizona,mlp_model_0110_6,163.95299298358364,2.0
+4883,United States,Arizona,mlp_model_1110,176.88292407807353,3.0
+4883,United States,Arizona,LSTM,237.2097071129101,4.0
+4883,United States,Arizona,mlp_model_1110_6,279.6818228259933,5.0
+4883,United States,Arizona,mlp_model_0110_2,296.2600528407831,6.0
+4883,United States,Arizona,mlp_model_1110_2,568.1452801625933,7.0
+4883,United States,Arizona,mlp_model_0110,3036.1978448608975,8.0
 4905,United States,Arkansas,Linear,122.00705181425394,1.0
 4905,United States,Arkansas,LSTM,144.25744085648148,2.0
-4905,United States,Arkansas,GBR,216.49825596625354,3.0
+4905,United States,Arkansas,mlp_model_1110,204.26332762788226,3.0
+4905,United States,Arkansas,mlp_model_0110_2,227.12823287868352,4.0
+4905,United States,Arkansas,mlp_model_1110_2,227.66190238358962,5.0
+4905,United States,Arkansas,mlp_model_0110_6,256.0140122385483,6.0
+4905,United States,Arkansas,mlp_model_1110_6,474.07924561653937,7.0
+4905,United States,Arkansas,mlp_model_0110,54302.1222064588,8.0
 4927,United States,California,Linear,117.1791823527271,1.0
 4927,United States,California,LSTM,225.2430035099467,2.0
-4927,United States,California,GBR,525.3227975731027,3.0
-4949,United States,Colorado,GBR,57.98644494147326,1.0
-4949,United States,Colorado,Linear,294.7930051197033,2.0
-4949,United States,Colorado,LSTM,334.8760155029757,3.0
-4971,United States,Connecticut,LSTM,142.50933615544608,1.0
-4971,United States,Connecticut,Linear,164.9535618350983,2.0
-4971,United States,Connecticut,GBR,352.58984588190634,3.0
-4993,United States,Delaware,Linear,104.05203521058755,1.0
-4993,United States,Delaware,LSTM,115.02345466412328,2.0
-4993,United States,Delaware,GBR,322.57207135275456,3.0
-5015,United States,Florida,LSTM,56.63456883103559,1.0
-5015,United States,Florida,GBR,78.82638265630759,2.0
-5015,United States,Florida,Linear,90.14738539125838,3.0
-5037,United States,Georgia,Linear,58.52448060535998,1.0
-5037,United States,Georgia,LSTM,67.81562750440058,2.0
-5037,United States,Georgia,GBR,241.7641009206107,3.0
-5059,United States,Hawaii,GBR,10.511746673133036,1.0
-5059,United States,Hawaii,LSTM,36.62844810717648,2.0
-5059,United States,Hawaii,Linear,171.9422052900106,3.0
-5081,United States,Idaho,GBR,180.2634609700101,1.0
-5081,United States,Idaho,Linear,231.29945646922724,2.0
-5081,United States,Idaho,LSTM,330.68981589816434,3.0
-5103,United States,Illinois,GBR,216.39786663752383,1.0
-5103,United States,Illinois,Linear,262.6890048260306,2.0
-5103,United States,Illinois,LSTM,325.4044527285204,3.0
-5125,United States,Indiana,GBR,243.06233290745487,1.0
+4927,United States,California,mlp_model_1110_2,254.77621692790845,3.0
+4927,United States,California,mlp_model_1110_6,333.2289817734504,4.0
+4927,United States,California,mlp_model_1110,333.3184371466757,5.0
+4927,United States,California,mlp_model_0110_6,375.6214188106334,6.0
+4927,United States,California,mlp_model_0110,418.53713016884353,7.0
+4927,United States,California,mlp_model_0110_2,458.72360900386263,8.0
+4949,United States,Colorado,mlp_model_0110_6,26.367312031141335,1.0
+4949,United States,Colorado,mlp_model_1110,82.50423480271178,2.0
+4949,United States,Colorado,mlp_model_0110_2,176.6597692332317,3.0
+4949,United States,Colorado,mlp_model_1110_2,255.92893371010675,4.0
+4949,United States,Colorado,mlp_model_1110_6,256.8624268278566,5.0
+4949,United States,Colorado,Linear,294.7930051197033,6.0
+4949,United States,Colorado,LSTM,334.8760155029757,7.0
+4949,United States,Colorado,mlp_model_0110,7060.337490467538,8.0
+4971,United States,Connecticut,mlp_model_1110_2,137.20443996957806,1.0
+4971,United States,Connecticut,LSTM,142.50933615544608,2.0
+4971,United States,Connecticut,Linear,164.9535618350983,3.0
+4971,United States,Connecticut,mlp_model_1110_6,254.57964026725315,4.0
+4971,United States,Connecticut,mlp_model_1110,295.4719529618551,5.0
+4971,United States,Connecticut,mlp_model_0110_2,297.67198554530864,6.0
+4971,United States,Connecticut,mlp_model_0110_6,315.08480573704935,7.0
+4971,United States,Connecticut,mlp_model_0110,82653.0404415926,8.0
+4993,United States,Delaware,mlp_model_0110_6,65.28422551195627,1.0
+4993,United States,Delaware,mlp_model_0110_2,68.84971518015904,2.0
+4993,United States,Delaware,mlp_model_1110,82.17041977134782,3.0
+4993,United States,Delaware,Linear,104.05203521058755,4.0
+4993,United States,Delaware,mlp_model_1110_2,113.22295471863698,5.0
+4993,United States,Delaware,LSTM,115.02345466412328,6.0
+4993,United States,Delaware,mlp_model_1110_6,255.1016474471362,7.0
+4993,United States,Delaware,mlp_model_0110,76252.35599599921,8.0
+5015,United States,Florida,mlp_model_0110_2,37.78848324039896,1.0
+5015,United States,Florida,LSTM,56.63456883103559,2.0
+5015,United States,Florida,mlp_model_1110,72.99893690449959,3.0
+5015,United States,Florida,mlp_model_1110_6,75.88063842254537,4.0
+5015,United States,Florida,Linear,90.14738539125838,5.0
+5015,United States,Florida,mlp_model_0110_6,96.68106593999313,6.0
+5015,United States,Florida,mlp_model_1110_2,137.41789568331538,7.0
+5015,United States,Florida,mlp_model_0110,368.32324864117936,8.0
+5037,United States,Georgia,mlp_model_0110_6,37.439440155657074,1.0
+5037,United States,Georgia,Linear,58.52448060535998,2.0
+5037,United States,Georgia,LSTM,67.81562750440058,3.0
+5037,United States,Georgia,mlp_model_1110_2,178.95803816030542,4.0
+5037,United States,Georgia,mlp_model_1110_6,269.96589177709484,5.0
+5037,United States,Georgia,mlp_model_0110_2,303.5637857107715,6.0
+5037,United States,Georgia,mlp_model_1110,384.21750949114687,7.0
+5037,United States,Georgia,mlp_model_0110,23605.017940119902,8.0
+5059,United States,Hawaii,LSTM,36.62844810717648,1.0
+5059,United States,Hawaii,Linear,171.9422052900106,2.0
+5059,United States,Hawaii,mlp_model_0110_6,571.0736565610462,3.5
+5059,United States,Hawaii,mlp_model_1110_2,571.0736565610722,3.5
+5059,United States,Hawaii,mlp_model_1110_6,571.4945411571379,5.0
+5059,United States,Hawaii,mlp_model_0110_2,571.8767229740204,6.0
+5059,United States,Hawaii,mlp_model_1110,572.4353303881167,7.0
+5059,United States,Hawaii,mlp_model_0110,379593.38801538676,8.0
+5081,United States,Idaho,mlp_model_0110_6,73.15582525981732,1.0
+5081,United States,Idaho,mlp_model_1110_2,130.64941628181154,2.0
+5081,United States,Idaho,mlp_model_1110,164.61143674115877,3.0
+5081,United States,Idaho,Linear,231.29945646922724,4.0
+5081,United States,Idaho,mlp_model_1110_6,241.57486387411146,5.0
+5081,United States,Idaho,mlp_model_0110_2,297.4309840703688,6.0
+5081,United States,Idaho,LSTM,330.68981589816434,7.0
+5081,United States,Idaho,mlp_model_0110,883.7251598147865,8.0
+5103,United States,Illinois,mlp_model_0110_2,178.87265362787682,1.0
+5103,United States,Illinois,mlp_model_1110_6,198.4728259527574,2.0
+5103,United States,Illinois,Linear,262.6890048260306,3.0
+5103,United States,Illinois,mlp_model_1110,276.9993706523768,4.0
+5103,United States,Illinois,mlp_model_0110_6,279.0398457149267,5.0
+5103,United States,Illinois,LSTM,325.4044527285204,6.0
+5103,United States,Illinois,mlp_model_1110_2,389.3277690864933,7.0
+5103,United States,Illinois,mlp_model_0110,3576.5516264722496,8.0
+5125,United States,Indiana,mlp_model_0110_6,161.07111312478747,1.0
 5125,United States,Indiana,Linear,301.24361328481075,2.0
 5125,United States,Indiana,LSTM,365.17339187974505,3.0
-5147,United States,Iowa,GBR,114.65874486864827,1.0
-5147,United States,Iowa,Linear,320.0663542503047,2.0
-5147,United States,Iowa,LSTM,392.1498791641566,3.0
-5169,United States,Kansas,GBR,91.5116478463415,1.0
-5169,United States,Kansas,LSTM,258.92312313298123,2.0
-5169,United States,Kansas,Linear,306.9209546676399,3.0
-5191,United States,Kentucky,LSTM,195.98176574620982,1.0
-5191,United States,Kentucky,Linear,211.03704107052025,2.0
-5191,United States,Kentucky,GBR,269.6544612603679,3.0
-5213,United States,Louisiana,LSTM,121.83471090450885,1.0
-5213,United States,Louisiana,Linear,213.30705017607585,2.0
-5213,United States,Louisiana,GBR,263.99399585480967,3.0
-5235,United States,Maine,GBR,127.3846563916621,1.0
-5235,United States,Maine,LSTM,136.65694953133115,2.0
-5235,United States,Maine,Linear,168.41431594343575,3.0
+5125,United States,Indiana,mlp_model_0110_2,478.3943368561872,4.0
+5125,United States,Indiana,mlp_model_1110,513.7539651149159,5.0
+5125,United States,Indiana,mlp_model_1110_2,643.4531314949435,6.0
+5125,United States,Indiana,mlp_model_1110_6,644.2851664945463,7.0
+5125,United States,Indiana,mlp_model_0110,4281.653199953957,8.0
+5147,United States,Iowa,mlp_model_1110_6,83.10203736863726,1.0
+5147,United States,Iowa,mlp_model_1110,134.53748023812975,2.0
+5147,United States,Iowa,mlp_model_1110_2,186.65973040151383,3.0
+5147,United States,Iowa,Linear,320.0663542503047,4.0
+5147,United States,Iowa,LSTM,392.1498791641566,5.0
+5147,United States,Iowa,mlp_model_0110_6,825.3908377393542,6.0
+5147,United States,Iowa,mlp_model_0110_2,920.4822539154383,7.0
+5147,United States,Iowa,mlp_model_0110,6344.747994934305,8.0
+5169,United States,Kansas,mlp_model_1110_6,35.20583856847276,1.0
+5169,United States,Kansas,mlp_model_1110,48.49786270616815,2.0
+5169,United States,Kansas,mlp_model_1110_2,93.6954169112867,3.0
+5169,United States,Kansas,mlp_model_0110_6,152.37688863328407,4.0
+5169,United States,Kansas,LSTM,258.92312313298123,5.0
+5169,United States,Kansas,Linear,306.9209546676399,6.0
+5169,United States,Kansas,mlp_model_0110_2,357.53047611515717,7.0
+5169,United States,Kansas,mlp_model_0110,68829.92657587859,8.0
+5191,United States,Kentucky,mlp_model_0110_6,74.51452651473875,1.0
+5191,United States,Kentucky,mlp_model_1110,86.00625649206717,2.0
+5191,United States,Kentucky,mlp_model_0110_2,109.43218149898952,3.0
+5191,United States,Kentucky,LSTM,195.98176574620982,4.0
+5191,United States,Kentucky,Linear,211.03704107052025,5.0
+5191,United States,Kentucky,mlp_model_1110_2,232.36349129483077,6.0
+5191,United States,Kentucky,mlp_model_1110_6,318.4284828686262,7.0
+5191,United States,Kentucky,mlp_model_0110,10032.272128961322,8.0
+5213,United States,Louisiana,mlp_model_1110_6,89.49766329618018,1.0
+5213,United States,Louisiana,LSTM,121.83471090450885,2.0
+5213,United States,Louisiana,mlp_model_1110,171.18870475997136,3.0
+5213,United States,Louisiana,mlp_model_1110_2,175.59274640554946,4.0
+5213,United States,Louisiana,Linear,213.30705017607585,5.0
+5213,United States,Louisiana,mlp_model_0110_6,216.93742444111544,6.0
+5213,United States,Louisiana,mlp_model_0110_2,327.5478850036648,7.0
+5213,United States,Louisiana,mlp_model_0110,15624.53257930109,8.0
+5235,United States,Maine,LSTM,136.65694953133115,1.0
+5235,United States,Maine,Linear,168.41431594343575,2.0
+5235,United States,Maine,mlp_model_1110_6,408.2657882022999,3.5
+5235,United States,Maine,mlp_model_1110,408.2657882023145,3.5
+5235,United States,Maine,mlp_model_0110_2,413.08467926990113,5.0
+5235,United States,Maine,mlp_model_1110_2,415.85380471817746,6.0
+5235,United States,Maine,mlp_model_0110_6,417.24358885730805,7.0
+5235,United States,Maine,mlp_model_0110,46672.19636246758,8.0
 5257,United States,Maryland,LSTM,51.268356782478826,1.0
 5257,United States,Maryland,Linear,76.7765153758381,2.0
-5257,United States,Maryland,GBR,104.50205139138207,3.0
+5257,United States,Maryland,mlp_model_1110_2,255.5037339531597,3.0
+5257,United States,Maryland,mlp_model_1110_6,273.2514523329512,4.0
+5257,United States,Maryland,mlp_model_1110,281.55484451910206,5.0
+5257,United States,Maryland,mlp_model_0110_6,286.4856536595894,6.0
+5257,United States,Maryland,mlp_model_0110_2,327.6690141866402,7.0
+5257,United States,Maryland,mlp_model_0110,15816.452636622043,8.0
 5279,United States,Massachusetts,LSTM,61.5853780885495,1.0
 5279,United States,Massachusetts,Linear,168.5660432566439,2.0
-5279,United States,Massachusetts,GBR,438.73401048056496,3.0
-5301,United States,Michigan,GBR,123.86783039342886,1.0
-5301,United States,Michigan,Linear,263.70465835101834,2.0
-5301,United States,Michigan,LSTM,295.3173512160396,3.0
-5323,United States,Minnesota,GBR,257.92723760516185,1.0
-5323,United States,Minnesota,Linear,383.0297885055906,2.0
-5323,United States,Minnesota,LSTM,542.9535802660137,3.0
+5279,United States,Massachusetts,mlp_model_1110,288.974076405811,3.0
+5279,United States,Massachusetts,mlp_model_0110_2,344.7566603327681,4.0
+5279,United States,Massachusetts,mlp_model_1110_2,416.57085104072576,5.0
+5279,United States,Massachusetts,mlp_model_1110_6,507.8102835560952,6.0
+5279,United States,Massachusetts,mlp_model_0110_6,509.3447575148065,7.0
+5279,United States,Massachusetts,mlp_model_0110,2212.008617984331,8.0
+5301,United States,Michigan,mlp_model_1110,59.89175107446341,1.0
+5301,United States,Michigan,mlp_model_0110_6,68.47104134765479,2.0
+5301,United States,Michigan,mlp_model_1110_6,140.83759002367336,3.0
+5301,United States,Michigan,mlp_model_1110_2,177.93030222254112,4.0
+5301,United States,Michigan,mlp_model_0110_2,207.04391170551727,5.0
+5301,United States,Michigan,Linear,263.70465835101834,6.0
+5301,United States,Michigan,LSTM,295.3173512160396,7.0
+5301,United States,Michigan,mlp_model_0110,742.0604900353004,8.0
+5323,United States,Minnesota,mlp_model_0110_6,64.28069143477757,1.0
+5323,United States,Minnesota,mlp_model_1110,94.30114871335309,2.0
+5323,United States,Minnesota,mlp_model_1110_6,125.03701782915704,3.0
+5323,United States,Minnesota,mlp_model_1110_2,290.7481908789172,4.0
+5323,United States,Minnesota,Linear,383.0297885055906,5.0
+5323,United States,Minnesota,mlp_model_0110_2,434.77157489370575,6.0
+5323,United States,Minnesota,LSTM,542.9535802660137,7.0
+5323,United States,Minnesota,mlp_model_0110,651.1093981941723,8.0
 5345,United States,Mississippi,Linear,61.16515194037138,1.0
 5345,United States,Mississippi,LSTM,106.50218275528232,2.0
-5345,United States,Mississippi,GBR,265.6912238455164,3.0
-5367,United States,Missouri,GBR,48.53872997351878,1.0
-5367,United States,Missouri,Linear,130.46461471298247,2.0
-5367,United States,Missouri,LSTM,192.94455626196336,3.0
-5389,United States,Montana,GBR,104.84041213480815,1.0
-5389,United States,Montana,Linear,203.96222240532296,2.0
-5389,United States,Montana,LSTM,442.76986986371276,3.0
-5411,United States,Nebraska,GBR,204.94758026787335,1.0
-5411,United States,Nebraska,Linear,331.63043507226104,2.0
-5411,United States,Nebraska,LSTM,559.6261770324606,3.0
-5433,United States,Nevada,GBR,120.3042956073082,1.0
-5433,United States,Nevada,Linear,159.5663056546933,2.0
-5433,United States,Nevada,LSTM,195.25308090989017,3.0
-5455,United States,New Hampshire,Linear,83.2067488499155,1.0
-5455,United States,New Hampshire,LSTM,139.48754815667579,2.0
-5455,United States,New Hampshire,GBR,307.2861088866758,3.0
-5477,United States,New Jersey,GBR,26.944546464875277,1.0
-5477,United States,New Jersey,LSTM,115.70391330487107,2.0
-5477,United States,New Jersey,Linear,140.68277673121946,3.0
-5499,United States,New Mexico,GBR,95.83482320327612,1.0
-5499,United States,New Mexico,Linear,175.78486282561417,2.0
+5345,United States,Mississippi,mlp_model_0110_2,187.78918062746425,3.0
+5345,United States,Mississippi,mlp_model_0110_6,207.1978955487833,4.0
+5345,United States,Mississippi,mlp_model_1110_6,257.1448205184448,5.0
+5345,United States,Mississippi,mlp_model_1110,319.09424142943743,6.0
+5345,United States,Mississippi,mlp_model_1110_2,328.87352553360284,7.0
+5345,United States,Mississippi,mlp_model_0110,2636.0716927598555,8.0
+5367,United States,Missouri,mlp_model_1110_6,44.53815933307434,1.0
+5367,United States,Missouri,mlp_model_0110_6,120.187554279386,2.0
+5367,United States,Missouri,Linear,130.46461471298247,3.0
+5367,United States,Missouri,mlp_model_1110_2,141.2335109362665,4.0
+5367,United States,Missouri,mlp_model_1110,142.54294942960692,5.0
+5367,United States,Missouri,LSTM,192.94455626196336,6.0
+5367,United States,Missouri,mlp_model_0110_2,395.6879441146143,7.0
+5367,United States,Missouri,mlp_model_0110,2735.1714529223814,8.0
+5389,United States,Montana,mlp_model_1110,98.20247541324841,1.0
+5389,United States,Montana,mlp_model_1110_6,104.48163097218298,2.0
+5389,United States,Montana,Linear,203.96222240532296,3.0
+5389,United States,Montana,mlp_model_1110_2,395.0264165306091,4.0
+5389,United States,Montana,LSTM,442.76986986371276,5.0
+5389,United States,Montana,mlp_model_0110_6,622.3886637189534,6.0
+5389,United States,Montana,mlp_model_0110_2,1445.7512923773859,7.0
+5389,United States,Montana,mlp_model_0110,100743.29747316154,8.0
+5411,United States,Nebraska,mlp_model_1110_2,169.77992778888355,1.0
+5411,United States,Nebraska,mlp_model_0110_6,175.59718153228891,2.0
+5411,United States,Nebraska,mlp_model_1110_6,225.49478430650515,3.0
+5411,United States,Nebraska,mlp_model_0110_2,274.4035741948673,4.0
+5411,United States,Nebraska,mlp_model_1110,301.8118431216446,5.0
+5411,United States,Nebraska,Linear,331.63043507226104,6.0
+5411,United States,Nebraska,LSTM,559.6261770324606,7.0
+5411,United States,Nebraska,mlp_model_0110,24222.734611530275,8.0
+5433,United States,Nevada,Linear,159.5663056546933,1.0
+5433,United States,Nevada,LSTM,195.25308090989017,2.0
+5433,United States,Nevada,mlp_model_0110_6,196.78045564172035,3.0
+5433,United States,Nevada,mlp_model_1110,248.44632121359106,4.0
+5433,United States,Nevada,mlp_model_1110_2,388.6645046602611,5.0
+5433,United States,Nevada,mlp_model_1110_6,419.44906281531587,6.0
+5433,United States,Nevada,mlp_model_0110_2,586.6144955104229,7.0
+5433,United States,Nevada,mlp_model_0110,146555.96658238792,8.0
+5455,United States,New Hampshire,mlp_model_1110_2,60.96639551069171,1.0
+5455,United States,New Hampshire,mlp_model_1110,64.25179486965801,2.0
+5455,United States,New Hampshire,mlp_model_0110_6,66.94878404112929,3.0
+5455,United States,New Hampshire,mlp_model_1110_6,76.91088258691684,4.0
+5455,United States,New Hampshire,Linear,83.2067488499155,5.0
+5455,United States,New Hampshire,LSTM,139.48754815667579,6.0
+5455,United States,New Hampshire,mlp_model_0110_2,164.22568735979067,7.0
+5455,United States,New Hampshire,mlp_model_0110,232362.41491367418,8.0
+5477,United States,New Jersey,mlp_model_1110,43.296328807543404,1.0
+5477,United States,New Jersey,mlp_model_0110_2,67.09358017291058,2.0
+5477,United States,New Jersey,mlp_model_0110,90.39345224996829,3.0
+5477,United States,New Jersey,LSTM,115.70391330487107,4.0
+5477,United States,New Jersey,mlp_model_1110_2,128.86822843009134,5.0
+5477,United States,New Jersey,Linear,140.68277673121946,6.0
+5477,United States,New Jersey,mlp_model_1110_6,265.0639506060121,7.0
+5477,United States,New Jersey,mlp_model_0110_6,322.2416917380131,8.0
+5499,United States,New Mexico,Linear,175.78486282561417,1.0
+5499,United States,New Mexico,mlp_model_1110_2,193.97811134424538,2.0
 5499,United States,New Mexico,LSTM,238.81020353657215,3.0
+5499,United States,New Mexico,mlp_model_0110_2,379.0339484804622,4.0
+5499,United States,New Mexico,mlp_model_1110,625.3423268107703,5.0
+5499,United States,New Mexico,mlp_model_1110_6,781.4383299303967,6.0
+5499,United States,New Mexico,mlp_model_0110_6,1023.3826825369591,7.0
+5499,United States,New Mexico,mlp_model_0110,73917.02842303015,8.0
 5521,United States,New York,LSTM,46.121223776748636,1.0
-5521,United States,New York,Linear,85.13591725550606,2.0
-5521,United States,New York,GBR,146.6097858917686,3.0
+5521,United States,New York,mlp_model_0110_6,52.69797435827737,2.0
+5521,United States,New York,mlp_model_1110,57.412482473686204,3.0
+5521,United States,New York,mlp_model_1110_2,65.79018020673958,4.0
+5521,United States,New York,mlp_model_0110_2,79.01557595230788,5.0
+5521,United States,New York,Linear,85.13591725550606,6.0
+5521,United States,New York,mlp_model_1110_6,93.93630584334322,7.0
+5521,United States,New York,mlp_model_0110,114.58929153498994,8.0
 5543,United States,North Carolina,Linear,74.03394404413201,1.0
 5543,United States,North Carolina,LSTM,94.99107093346115,2.0
-5543,United States,North Carolina,GBR,205.7275577612439,3.0
-5565,United States,North Dakota,Linear,303.9950516105458,1.0
-5565,United States,North Dakota,GBR,361.5897995449052,2.0
-5565,United States,North Dakota,LSTM,501.1935851851319,3.0
-5587,United States,Ohio,LSTM,252.74215703134206,1.0
-5587,United States,Ohio,GBR,280.60008440889044,2.0
-5587,United States,Ohio,Linear,310.9055524798632,3.0
-5609,United States,Oklahoma,GBR,63.94387006862098,1.0
-5609,United States,Oklahoma,Linear,80.56031162354085,2.0
-5609,United States,Oklahoma,LSTM,155.6546853416434,3.0
-5631,United States,Oregon,GBR,54.42619070038216,1.0
+5543,United States,North Carolina,mlp_model_1110,170.82840850262,3.0
+5543,United States,North Carolina,mlp_model_0110_6,224.24154154743763,4.0
+5543,United States,North Carolina,mlp_model_1110_2,224.95564152513035,5.0
+5543,United States,North Carolina,mlp_model_1110_6,253.41829451035517,6.0
+5543,United States,North Carolina,mlp_model_0110_2,256.93982424120236,7.0
+5543,United States,North Carolina,mlp_model_0110,407.6247116006893,8.0
+5565,United States,North Dakota,mlp_model_1110_6,218.0868805731804,1.0
+5565,United States,North Dakota,mlp_model_0110_2,234.02169173582502,2.0
+5565,United States,North Dakota,Linear,303.9950516105458,3.0
+5565,United States,North Dakota,mlp_model_1110,431.2998411790507,4.0
+5565,United States,North Dakota,LSTM,501.1935851851319,5.0
+5565,United States,North Dakota,mlp_model_0110_6,592.2145342342988,6.0
+5565,United States,North Dakota,mlp_model_1110_2,808.6985269286996,7.0
+5565,United States,North Dakota,mlp_model_0110,246094.43982869838,8.0
+5587,United States,Ohio,mlp_model_0110_6,212.46632371195446,1.0
+5587,United States,Ohio,LSTM,252.74215703134206,2.0
+5587,United States,Ohio,mlp_model_1110,304.8628657255148,3.0
+5587,United States,Ohio,Linear,310.9055524798632,4.0
+5587,United States,Ohio,mlp_model_0110_2,338.7535273468192,5.0
+5587,United States,Ohio,mlp_model_1110_2,359.60332730687287,6.0
+5587,United States,Ohio,mlp_model_1110_6,379.6339957444155,7.0
+5587,United States,Ohio,mlp_model_0110,550.5574290352708,8.0
+5609,United States,Oklahoma,Linear,80.56031162354085,1.0
+5609,United States,Oklahoma,LSTM,155.6546853416434,2.0
+5609,United States,Oklahoma,mlp_model_0110_6,162.89201003609512,3.0
+5609,United States,Oklahoma,mlp_model_1110_2,189.7184734233346,4.0
+5609,United States,Oklahoma,mlp_model_0110_2,323.97126959250505,5.0
+5609,United States,Oklahoma,mlp_model_1110_6,369.8095854561919,6.0
+5609,United States,Oklahoma,mlp_model_1110,494.8481034621023,7.0
+5609,United States,Oklahoma,mlp_model_0110,5560.890783529127,8.0
+5631,United States,Oregon,mlp_model_1110_6,41.1617972039174,1.0
 5631,United States,Oregon,Linear,65.37073254276694,2.0
-5631,United States,Oregon,LSTM,73.7326092381839,3.0
+5631,United States,Oregon,mlp_model_0110_6,68.2266715557956,3.0
+5631,United States,Oregon,mlp_model_1110,69.37723822415721,4.0
+5631,United States,Oregon,LSTM,73.7326092381839,5.0
+5631,United States,Oregon,mlp_model_1110_2,246.59593073346647,6.0
+5631,United States,Oregon,mlp_model_0110_2,291.1856905034281,7.0
+5631,United States,Oregon,mlp_model_0110,78134.3773360705,8.0
 5653,United States,Pennsylvania,LSTM,86.09728534509432,1.0
 5653,United States,Pennsylvania,Linear,134.23650746882268,2.0
-5653,United States,Pennsylvania,GBR,232.47280356029722,3.0
-5675,United States,Rhode Island,Linear,182.11187110997065,1.0
-5675,United States,Rhode Island,LSTM,390.2172309167137,2.0
-5675,United States,Rhode Island,GBR,443.1706596477092,3.0
+5653,United States,Pennsylvania,mlp_model_1110,151.8559911107298,3.0
+5653,United States,Pennsylvania,mlp_model_0110_6,289.0577246150289,4.0
+5653,United States,Pennsylvania,mlp_model_1110_2,353.46684706348293,5.0
+5653,United States,Pennsylvania,mlp_model_0110_2,359.4793541494393,6.0
+5653,United States,Pennsylvania,mlp_model_1110_6,378.9140623095415,7.0
+5653,United States,Pennsylvania,mlp_model_0110,741.0617858884492,8.0
+5675,United States,Rhode Island,mlp_model_1110_6,103.45592556800486,1.0
+5675,United States,Rhode Island,mlp_model_1110_2,109.56655519039792,2.0
+5675,United States,Rhode Island,mlp_model_0110_6,133.03574307360523,3.0
+5675,United States,Rhode Island,Linear,182.11187110997065,4.0
+5675,United States,Rhode Island,mlp_model_1110,221.80638479062205,5.0
+5675,United States,Rhode Island,mlp_model_0110_2,282.052427762551,6.0
+5675,United States,Rhode Island,LSTM,390.2172309167137,7.0
+5675,United States,Rhode Island,mlp_model_0110,22752.408077916254,8.0
 5697,United States,South Carolina,Linear,40.61659191119688,1.0
 5697,United States,South Carolina,LSTM,91.7663240719264,2.0
-5697,United States,South Carolina,GBR,267.26741521652207,3.0
-5719,United States,South Dakota,GBR,205.8377436526812,1.0
-5719,United States,South Dakota,Linear,233.34842313750664,2.0
-5719,United States,South Dakota,LSTM,544.6658240103087,3.0
+5697,United States,South Carolina,mlp_model_0110_6,287.0405295292445,3.0
+5697,United States,South Carolina,mlp_model_1110_2,301.7451888942734,4.0
+5697,United States,South Carolina,mlp_model_1110,359.2380602175721,5.0
+5697,United States,South Carolina,mlp_model_1110_6,359.7370381966965,6.0
+5697,United States,South Carolina,mlp_model_0110_2,377.7071853301921,7.0
+5697,United States,South Carolina,mlp_model_0110,74735.959127688,8.0
+5719,United States,South Dakota,mlp_model_0110_6,94.9634597540442,1.0
+5719,United States,South Dakota,mlp_model_1110_6,201.88461541587913,2.0
+5719,United States,South Dakota,Linear,233.34842313750664,3.0
+5719,United States,South Dakota,mlp_model_0110_2,297.63143336403255,4.0
+5719,United States,South Dakota,mlp_model_1110_2,353.1344838361257,5.0
+5719,United States,South Dakota,mlp_model_1110,496.34845680772645,6.0
+5719,United States,South Dakota,LSTM,544.6658240103087,7.0
+5719,United States,South Dakota,mlp_model_0110,14877.764888939624,8.0
 5741,United States,Tennessee,Linear,233.51724653238935,1.0
-5741,United States,Tennessee,GBR,328.983725290771,2.0
-5741,United States,Tennessee,LSTM,440.3544206253321,3.0
-5763,United States,Texas,LSTM,121.23366100878856,1.0
-5763,United States,Texas,Linear,145.79712051425145,2.0
-5763,United States,Texas,GBR,299.0791725376,3.0
-5785,United States,Utah,GBR,211.78512038964914,1.0
+5741,United States,Tennessee,mlp_model_0110_2,324.9623836969521,2.0
+5741,United States,Tennessee,mlp_model_0110_6,415.62837003912585,3.0
+5741,United States,Tennessee,mlp_model_1110,429.68873288358907,4.0
+5741,United States,Tennessee,LSTM,440.3544206253321,5.0
+5741,United States,Tennessee,mlp_model_1110_2,506.2988038616917,6.0
+5741,United States,Tennessee,mlp_model_1110_6,546.1449875694375,7.0
+5741,United States,Tennessee,mlp_model_0110,27589.66763730877,8.0
+5763,United States,Texas,mlp_model_0110_2,30.354980375165162,1.0
+5763,United States,Texas,mlp_model_0110_6,38.3819139434372,2.0
+5763,United States,Texas,mlp_model_1110_2,104.43236426848219,3.0
+5763,United States,Texas,LSTM,121.23366100878856,4.0
+5763,United States,Texas,Linear,145.79712051425145,5.0
+5763,United States,Texas,mlp_model_1110_6,193.2929157483022,6.0
+5763,United States,Texas,mlp_model_1110,237.0414457019766,7.0
+5763,United States,Texas,mlp_model_0110,317.4883450612713,8.0
+5785,United States,Utah,mlp_model_0110_6,217.11506754232929,1.0
 5785,United States,Utah,Linear,297.7537552187123,2.0
-5785,United States,Utah,LSTM,402.3557238333534,3.0
+5785,United States,Utah,mlp_model_0110_2,307.1994838893698,3.0
+5785,United States,Utah,mlp_model_1110_2,346.32535438691633,4.0
+5785,United States,Utah,mlp_model_1110_6,348.2313694613211,5.0
+5785,United States,Utah,mlp_model_1110,388.27950386791224,6.0
+5785,United States,Utah,LSTM,402.3557238333534,7.0
+5785,United States,Utah,mlp_model_0110,36467.05059291005,8.0
 5807,United States,Vermont,LSTM,27.353533832627182,1.0
-5807,United States,Vermont,GBR,88.99570513143598,2.0
-5807,United States,Vermont,Linear,319.41616423304475,3.0
-5829,United States,Virgin Islands,Linear,,3.0
-5829,United States,Virgin Islands,GBR,,2.0
+5807,United States,Vermont,Linear,319.41616423304475,2.0
+5807,United States,Vermont,mlp_model_1110_2,1262.3349716923774,3.0
+5807,United States,Vermont,mlp_model_0110_6,1265.9066394564306,4.0
+5807,United States,Vermont,mlp_model_1110_6,1268.795239028102,5.0
+5807,United States,Vermont,mlp_model_1110,1271.3984350919436,6.0
+5807,United States,Vermont,mlp_model_0110_2,1296.9098398034507,7.0
+5807,United States,Vermont,mlp_model_0110,906776.9291108501,8.0
+5829,United States,Virgin Islands,mlp_model_0110,,8.0
+5829,United States,Virgin Islands,mlp_model_1110,,4.0
+5829,United States,Virgin Islands,mlp_model_0110_6,,4.0
+5829,United States,Virgin Islands,mlp_model_1110_6,,7.0
+5829,United States,Virgin Islands,mlp_model_0110_2,,6.0
+5829,United States,Virgin Islands,mlp_model_1110_2,,4.0
 5829,United States,Virgin Islands,LSTM,,1.0
-5851,United States,Virginia,Linear,78.05415224766506,1.0
-5851,United States,Virginia,LSTM,78.38572999105253,2.0
-5851,United States,Virginia,GBR,136.93153518349365,3.0
-5873,United States,Washington,GBR,97.13287095976146,1.0
-5873,United States,Washington,Linear,127.4951811246084,2.0
-5873,United States,Washington,LSTM,132.31829110364544,3.0
-5895,United States,Washington DC,Linear,,2.0
-5895,United States,Washington DC,GBR,,1.0
-5895,United States,Washington DC,LSTM,,3.0
+5829,United States,Virgin Islands,Linear,,2.0
+5851,United States,Virginia,mlp_model_0110_6,39.67823863098236,1.0
+5851,United States,Virginia,mlp_model_1110_6,58.10883789058154,2.0
+5851,United States,Virginia,Linear,78.05415224766506,3.0
+5851,United States,Virginia,LSTM,78.38572999105253,4.0
+5851,United States,Virginia,mlp_model_1110_2,95.58899356157943,5.0
+5851,United States,Virginia,mlp_model_0110_2,124.02640366590455,6.0
+5851,United States,Virginia,mlp_model_1110,175.12010854615423,7.0
+5851,United States,Virginia,mlp_model_0110,50543.82108568094,8.0
+5873,United States,Washington,mlp_model_1110_2,63.83204553001361,1.0
+5873,United States,Washington,mlp_model_1110,74.79204872648842,2.0
+5873,United States,Washington,mlp_model_1110_6,75.84440243004921,3.0
+5873,United States,Washington,mlp_model_0110_6,102.76533036671667,4.0
+5873,United States,Washington,Linear,127.4951811246084,5.0
+5873,United States,Washington,LSTM,132.31829110364544,6.0
+5873,United States,Washington,mlp_model_0110_2,195.03169929026143,7.0
+5873,United States,Washington,mlp_model_0110,1742.5172296702797,8.0
+5895,United States,Washington DC,mlp_model_0110,,8.0
+5895,United States,Washington DC,mlp_model_1110,,7.0
+5895,United States,Washington DC,mlp_model_0110_6,,5.0
+5895,United States,Washington DC,mlp_model_1110_6,,4.0
+5895,United States,Washington DC,mlp_model_0110_2,,6.0
+5895,United States,Washington DC,mlp_model_1110_2,,3.0
+5895,United States,Washington DC,LSTM,,2.0
+5895,United States,Washington DC,Linear,,1.0
 5917,United States,West Virginia,Linear,44.32492570610048,1.0
-5917,United States,West Virginia,LSTM,80.19140626011702,2.0
-5917,United States,West Virginia,GBR,109.55195538108386,3.0
-5939,United States,Wisconsin,GBR,106.75337493984252,1.0
-5939,United States,Wisconsin,Linear,247.6013221409987,2.0
-5939,United States,Wisconsin,LSTM,354.7590080183421,3.0
-5961,United States,Wyoming,GBR,186.76825846558054,1.0
-5961,United States,Wyoming,Linear,252.26536453553624,2.0
-5961,United States,Wyoming,LSTM,492.5865219829677,3.0
+5917,United States,West Virginia,mlp_model_1110_6,71.9134062261222,2.0
+5917,United States,West Virginia,LSTM,80.19140626011702,3.0
+5917,United States,West Virginia,mlp_model_0110_2,224.86146050681373,4.0
+5917,United States,West Virginia,mlp_model_1110_2,230.67285562391064,5.0
+5917,United States,West Virginia,mlp_model_1110,239.1273042412272,6.0
+5917,United States,West Virginia,mlp_model_0110_6,352.7343196268086,7.0
+5917,United States,West Virginia,mlp_model_0110,141436.0035176663,8.0
+5939,United States,Wisconsin,mlp_model_1110_6,78.41538868148652,1.0
+5939,United States,Wisconsin,mlp_model_1110,118.37628231613154,2.0
+5939,United States,Wisconsin,mlp_model_0110_6,219.4069425542587,3.0
+5939,United States,Wisconsin,Linear,247.6013221409987,4.0
+5939,United States,Wisconsin,mlp_model_1110_2,278.9154930984829,5.0
+5939,United States,Wisconsin,mlp_model_0110_2,284.68960728671493,6.0
+5939,United States,Wisconsin,LSTM,354.7590080183421,7.0
+5939,United States,Wisconsin,mlp_model_0110,19183.3362113761,8.0
+5961,United States,Wyoming,Linear,252.26536453553624,1.0
+5961,United States,Wyoming,LSTM,492.5865219829677,2.0
+5961,United States,Wyoming,mlp_model_1110_6,630.463500019971,3.0
+5961,United States,Wyoming,mlp_model_1110_2,675.6138656234966,4.0
+5961,United States,Wyoming,mlp_model_0110_6,695.5056852110267,5.0
+5961,United States,Wyoming,mlp_model_1110,774.9616346448541,6.0
+5961,United States,Wyoming,mlp_model_0110_2,936.2195798553885,7.0
+5961,United States,Wyoming,mlp_model_0110,157066.914447519,8.0
