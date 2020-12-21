@@ -15,15 +15,16 @@ OXFORD_DATA_FILE = os.path.join(ROOT_DIR, 'data', "OxCGRT_latest.csv")
 SOCIAL_EXPLORER_DATA_FILE = os.path.join(ROOT_DIR, 'data', "social_explorer_data.csv")
 LODES_DATA_FILE = os.path.join(ROOT_DIR, 'data', "lodes_us_states_rac_S000_JT00_2018.csv")
 CASES_PIPE_FILE = os.path.join(ROOT_DIR, 'data', 'cases_pipe.pkl')
-FS_INDEX_FILE = os.path.join(ROOT_DIR, 'data', 'lin-reg-fs.npy')
-MODEL_FILE = os.path.join(ROOT_DIR, "models", "mlp_model_1110_2.pkl")
+# Params to change
+FS_INDEX_FILE = os.path.join(ROOT_DIR, 'data', 'gbr_fs_1112_6.npy')
+MODEL_FILE = os.path.join(ROOT_DIR, "models", "gbr_model_1112_6.pkl")
 
 # Set these parameters depending on model
 nb_lookback_days = 30
 static = True
 rolling = True
 transform = True
-fs = False # Feature selection
+fs = True # Feature selection
 
 ID_COLS = ['CountryName',
            'RegionName',
