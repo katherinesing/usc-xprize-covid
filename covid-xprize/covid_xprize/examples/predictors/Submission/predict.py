@@ -239,14 +239,15 @@ def runUSModel(us_model, hist_cases_gdf, hist_ips_gdf, ips_gdf, census_data, lod
     X_census = all_census_data
     X_lodes = all_lodes_data
     X = np.concatenate([X_cases.flatten(), X_npis_or.flatten(), X_census.flatten(), X_lodes.flatten()])
-    X = X[np.array(us_fs_index)]
+    if us_fs:
+      X = X[np.array(us_fs_index)]
     
     # Make the prediction (reshape so that sklearn is happy)
     pred = us_model.predict(X.reshape(1, -1))[0]
     new_row = [pred]
-    if us_rolling:
-      # Convert rolling avg to actual cases
-      pred = 7*(pred-past_cases[-1, 1])+past_cases[-7, 0]
+    # if us_rolling:
+    #   # Convert rolling avg to actual cases
+    #   pred = 7*(pred-past_cases[-1, 1])+past_cases[-7, 0]
     pred = max(0, pred)  # Do not allow predicting negative cases
     new_row = [pred] + new_row
     # Add if it's a requested date
